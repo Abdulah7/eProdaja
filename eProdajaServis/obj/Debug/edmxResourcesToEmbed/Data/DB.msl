@@ -1,0 +1,596 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AutoSalonModelStoreContainer" CdmEntityContainer="AutoSalonEntities">
+    <EntitySetMapping Name="AutaStavke">
+      <EntityTypeMapping TypeName="AutoSalonModel.AutaStavke">
+        <MappingFragment StoreEntitySet="AutaStavke">
+          <ScalarProperty Name="AutaStavkeID" ColumnName="AutaStavkeID" />
+          <ScalarProperty Name="KorisnikID" ColumnName="KorisnikID" />
+          <ScalarProperty Name="VoziloID" ColumnName="VoziloID" />
+          <ScalarProperty Name="Kolicina" ColumnName="Kolicina" />
+          <ScalarProperty Name="KupacID" ColumnName="KupacID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Korisnici">
+      <EntityTypeMapping TypeName="AutoSalonModel.Korisnici">
+        <MappingFragment StoreEntitySet="Korisnici">
+          <ScalarProperty Name="KorisnikID" ColumnName="KorisnikID" />
+          <ScalarProperty Name="ImeKorisnika" ColumnName="ImeKorisnika" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="LozinkaHash" ColumnName="LozinkaHash" />
+          <ScalarProperty Name="LozinkaSalt" ColumnName="LozinkaSalt" />
+          <ScalarProperty Name="SalonID" ColumnName="SalonID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Model">
+      <EntityTypeMapping TypeName="AutoSalonModel.Model">
+        <MappingFragment StoreEntitySet="Model">
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="ProizvodjacID" ColumnName="ProizvodjacID" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="VrstaModela" ColumnName="VrstaModela" />
+          <ScalarProperty Name="Kolicina" ColumnName="Kolicina" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NacinPlacanja">
+      <EntityTypeMapping TypeName="AutoSalonModel.NacinPlacanja">
+        <MappingFragment StoreEntitySet="NacinPlacanja">
+          <ScalarProperty Name="PlacanjeID" ColumnName="PlacanjeID" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proizvodjac">
+      <EntityTypeMapping TypeName="AutoSalonModel.Proizvodjac">
+        <MappingFragment StoreEntitySet="Proizvodjac">
+          <ScalarProperty Name="ProizvodjacID" ColumnName="ProizvodjacID" />
+          <ScalarProperty Name="NazivProizvodjaca" ColumnName="NazivProizvodjaca" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Racun">
+      <EntityTypeMapping TypeName="AutoSalonModel.Racun">
+        <MappingFragment StoreEntitySet="Racun">
+          <ScalarProperty Name="RacunID" ColumnName="RacunID" />
+          <ScalarProperty Name="KorisnikID" ColumnName="KorisnikID" />
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Komentar" ColumnName="Komentar" />
+          <ScalarProperty Name="PDV" ColumnName="PDV" />
+          <ScalarProperty Name="Ukupno" ColumnName="Ukupno" />
+          <ScalarProperty Name="DatumFakture" ColumnName="DatumFakture" />
+          <ScalarProperty Name="DatumIsporuke" ColumnName="DatumIsporuke" />
+          <ScalarProperty Name="NacinIsporuke" ColumnName="NacinIsporuke" />
+          <ScalarProperty Name="PlacanjeID" ColumnName="PlacanjeID" />
+          <ScalarProperty Name="VoziloID" ColumnName="VoziloID" />
+          <ScalarProperty Name="DijeloviID" ColumnName="DijeloviID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalonAuta">
+      <EntityTypeMapping TypeName="AutoSalonModel.SalonAuta">
+        <MappingFragment StoreEntitySet="SalonAuta">
+          <ScalarProperty Name="SalonID" ColumnName="SalonID" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="Sjedište" ColumnName="Sjedište" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="AutoSalonModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UgradjeniDijelovi">
+      <EntityTypeMapping TypeName="AutoSalonModel.UgradjeniDijelovi">
+        <MappingFragment StoreEntitySet="UgradjeniDijelovi">
+          <ScalarProperty Name="UgradjeniID" ColumnName="UgradjeniID" />
+          <ScalarProperty Name="KorisnikID" ColumnName="KorisnikID" />
+          <ScalarProperty Name="DijeloviID" ColumnName="DijeloviID" />
+          <ScalarProperty Name="Kolicina" ColumnName="Kolicina" />
+          <ScalarProperty Name="KupacID" ColumnName="KupacID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ALLCars" FunctionName="AutoSalonModel.Store.ALLCars" />
+    <FunctionImportMapping FunctionImportName="BrisanjeAuta" FunctionName="AutoSalonModel.Store.BrisanjeAuta" />
+    <FunctionImportMapping FunctionImportName="DeleteKupac" FunctionName="AutoSalonModel.Store.DeleteKupac" />
+    <FunctionImportMapping FunctionImportName="DijeloviDelete" FunctionName="AutoSalonModel.Store.DijeloviDelete" />
+    <FunctionImportMapping FunctionImportName="GETDIJELOVE" FunctionName="AutoSalonModel.Store.GETDIJELOVE" />
+    <FunctionImportMapping FunctionImportName="GETDijeloviID" FunctionName="AutoSalonModel.Store.GETDijeloviID" />
+    <FunctionImportMapping FunctionImportName="GETProdajaInfo" FunctionName="AutoSalonModel.Store.GETProdajaInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AutoSalonModel.GETProdajaInfo_Result">
+          <ScalarProperty Name="Vrsta_dijelova" ColumnName="Vrsta dijelova" />
+          <ScalarProperty Name="Ostvaren_profit" ColumnName="Ostvaren profit" />
+          <ScalarProperty Name="Ukupno_prodatih_dijelova" ColumnName="Ukupno prodatih dijelova" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GEtNarudzbaID" FunctionName="AutoSalonModel.Store.GEtNarudzbaID" />
+    <FunctionImportMapping FunctionImportName="GEtNazivDijelovaALl" FunctionName="AutoSalonModel.Store.GEtNazivDijelovaALl">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AutoSalonModel.GEtNazivDijelovaALl_Result1">
+          <ScalarProperty Name="DijeloviID" ColumnName="DijeloviID" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Zalihe" ColumnName="Zalihe" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Sifra" ColumnName="Sifra" />
+          <ScalarProperty Name="VoziloID" ColumnName="VoziloID" />
+          <ScalarProperty Name="ProizvodjacID" ColumnName="ProizvodjacID" />
+          <ScalarProperty Name="AutaProizvedena" ColumnName="AutaProizvedena" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllStavke" FunctionName="AutoSalonModel.Store.GetAllStavke" />
+    <FunctionImportMapping FunctionImportName="GetInfoUkupno" FunctionName="AutoSalonModel.Store.GetInfoUkupno">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AutoSalonModel.GetInfoUkupno_Result">
+          <ScalarProperty Name="Ukupna_zarada" ColumnName="Ukupna zarada" />
+          <ScalarProperty Name="Ukupno_prodato" ColumnName="Ukupno prodato" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetKupacIME" FunctionName="AutoSalonModel.Store.GetKupacIME" />
+    <FunctionImportMapping FunctionImportName="GetVoziloID" FunctionName="AutoSalonModel.Store.GetVoziloID" />
+    <FunctionImportMapping FunctionImportName="InsertAutaStavke" FunctionName="AutoSalonModel.Store.InsertAutaStavke" />
+    <FunctionImportMapping FunctionImportName="InsertDijelove" FunctionName="AutoSalonModel.Store.InsertDijelove" />
+    <FunctionImportMapping FunctionImportName="InsertModel" FunctionName="AutoSalonModel.Store.InsertModel" />
+    <FunctionImportMapping FunctionImportName="InsertProizvodjac" FunctionName="AutoSalonModel.Store.InsertProizvodjac" />
+    <FunctionImportMapping FunctionImportName="InsertRacun" FunctionName="AutoSalonModel.Store.InsertRacun" />
+    <FunctionImportMapping FunctionImportName="InsertUgradjeniDijelovi" FunctionName="AutoSalonModel.Store.InsertUgradjeniDijelovi" />
+    <FunctionImportMapping FunctionImportName="Ocjena_insert" FunctionName="AutoSalonModel.Store.Ocjena_insert" />
+    <FunctionImportMapping FunctionImportName="PretragaAuta" FunctionName="AutoSalonModel.Store.PretragaAuta" />
+    <FunctionImportMapping FunctionImportName="PretragaNarudzbi1" FunctionName="AutoSalonModel.Store.PretragaNarudzbi1" />
+    <FunctionImportMapping FunctionImportName="PretragaNarudzbi11" FunctionName="AutoSalonModel.Store.PretragaNarudzbi1" />
+    <FunctionImportMapping FunctionImportName="PretragaNarudzbiStavki" FunctionName="AutoSalonModel.Store.PretragaNarudzbiStavki" />
+    <FunctionImportMapping FunctionImportName="ProdajaAutaInfo" FunctionName="AutoSalonModel.Store.ProdajaAutaInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AutoSalonModel.ProdajaAutaInfo_Result">
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Prodato" ColumnName="Prodato" />
+          <ScalarProperty Name="Profit" ColumnName="Profit" />
+          <ScalarProperty Name="Zaliha" ColumnName="Zaliha" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ProdajaAutaInfoU" FunctionName="AutoSalonModel.Store.ProdajaAutaInfoU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AutoSalonModel.ProdajaAutaInfoU_Result">
+          <ScalarProperty Name="Broj_modela" ColumnName="Broj modela" />
+          <ScalarProperty Name="Ostvaren_profit" ColumnName="Ostvaren profit" />
+          <ScalarProperty Name="Ukupno_prodatih_vozila" ColumnName="Ukupno prodatih vozila" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="RAcunaiiiiia" FunctionName="AutoSalonModel.Store.RAcunaiiiiia">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AutoSalonModel.RAcunaiiiiia_Result">
+          <ScalarProperty Name="RacunID" ColumnName="RacunID" />
+          <ScalarProperty Name="KorisnikID" ColumnName="KorisnikID" />
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Komentar" ColumnName="Komentar" />
+          <ScalarProperty Name="PDV" ColumnName="PDV" />
+          <ScalarProperty Name="Ukupno" ColumnName="Ukupno" />
+          <ScalarProperty Name="DatumFakture" ColumnName="DatumFakture" />
+          <ScalarProperty Name="DatumIsporuke" ColumnName="DatumIsporuke" />
+          <ScalarProperty Name="NacinIsporuke" ColumnName="NacinIsporuke" />
+          <ScalarProperty Name="PlacanjeID" ColumnName="PlacanjeID" />
+          <ScalarProperty Name="VoziloID" ColumnName="VoziloID" />
+          <ScalarProperty Name="DijeloviID" ColumnName="DijeloviID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="RacunSelectByDatum" FunctionName="AutoSalonModel.Store.RacunSelectByDatum">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AutoSalonModel.RacunSelectByDatum_Result">
+          <ScalarProperty Name="RacunID" ColumnName="RacunID" />
+          <ScalarProperty Name="KorisnikID" ColumnName="KorisnikID" />
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Komentar" ColumnName="Komentar" />
+          <ScalarProperty Name="PDV" ColumnName="PDV" />
+          <ScalarProperty Name="Ukupno" ColumnName="Ukupno" />
+          <ScalarProperty Name="DatumFakture" ColumnName="DatumFakture" />
+          <ScalarProperty Name="DatumIsporuke" ColumnName="DatumIsporuke" />
+          <ScalarProperty Name="NacinIsporuke" ColumnName="NacinIsporuke" />
+          <ScalarProperty Name="PlacanjeID" ColumnName="PlacanjeID" />
+          <ScalarProperty Name="VoziloID" ColumnName="VoziloID" />
+          <ScalarProperty Name="DijeloviID" ColumnName="DijeloviID" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Automobil" ColumnName="Automobil" />
+          <ScalarProperty Name="BrojSasije" ColumnName="BrojSasije" />
+          <ScalarProperty Name="SnagaMotora" ColumnName="SnagaMotora" />
+          <ScalarProperty Name="Oprema" ColumnName="Oprema" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SearchKupac" FunctionName="AutoSalonModel.Store.SearchKupac" />
+    <FunctionImportMapping FunctionImportName="SearchVozila" FunctionName="AutoSalonModel.Store.SearchVozila" />
+    <FunctionImportMapping FunctionImportName="SelectALLModele" FunctionName="AutoSalonModel.Store.SelectALLModele">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AutoSalonModel.SelectALLModele_Result">
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="ProizvodjacID" ColumnName="ProizvodjacID" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="VrstaModela" ColumnName="VrstaModela" />
+          <ScalarProperty Name="Kolicina" ColumnName="Kolicina" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectServis" FunctionName="AutoSalonModel.Store.SelectServis" />
+    <FunctionImportMapping FunctionImportName="Servis_IzmjenaPassworda" FunctionName="AutoSalonModel.Store.Servis_IzmjenaPassworda" />
+    <FunctionImportMapping FunctionImportName="Servis_Update" FunctionName="AutoSalonModel.Store.Servis_Update" />
+    <FunctionImportMapping FunctionImportName="UgradjeniDijeloviDelete" FunctionName="AutoSalonModel.Store.UgradjeniDijeloviDelete" />
+    <FunctionImportMapping FunctionImportName="UgradjeniDijeloviPretraga" FunctionName="AutoSalonModel.Store.UgradjeniDijeloviPretraga" />
+    <FunctionImportMapping FunctionImportName="VOZILA_MODEL" FunctionName="AutoSalonModel.Store.VOZILA_MODEL" />
+    <FunctionImportMapping FunctionImportName="esp_ServisSelectID" FunctionName="AutoSalonModel.Store.esp_ServisSelectID" />
+    <FunctionImportMapping FunctionImportName="esp_select_by_Name" FunctionName="AutoSalonModel.Store.esp_select_by_Name" />
+    <FunctionImportMapping FunctionImportName="esp_update_status" FunctionName="AutoSalonModel.Store.esp_update_status" />
+    <FunctionImportMapping FunctionImportName="getAllProdajaAuta" FunctionName="AutoSalonModel.Store.getAllProdajaAuta">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AutoSalonModel.getAllProdajaAuta_Result">
+          <ScalarProperty Name="Ukupna_zarada" ColumnName="Ukupna zarada" />
+          <ScalarProperty Name="Ukupno_prodato" ColumnName="Ukupno prodato" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getAllServis" FunctionName="AutoSalonModel.Store.getAllServis" />
+    <FunctionImportMapping FunctionImportName="getAllUsluge" FunctionName="AutoSalonModel.Store.getAllUsluge" />
+    <FunctionImportMapping FunctionImportName="getIDKupac" FunctionName="AutoSalonModel.Store.getIDKupac" />
+    <FunctionImportMapping FunctionImportName="getNArudzbaHistori" FunctionName="AutoSalonModel.Store.getNArudzbaHistori" />
+    <FunctionImportMapping FunctionImportName="getNArudzbaIDHistoriy" FunctionName="AutoSalonModel.Store.getNArudzbaIDHistoriy" />
+    <FunctionImportMapping FunctionImportName="getRAcuniallFilter" FunctionName="AutoSalonModel.Store.getRAcuniallFilter" />
+    <FunctionImportMapping FunctionImportName="getRacun1" FunctionName="AutoSalonModel.Store.getRacun1">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AutoSalonModel.getRacun1_Result">
+          <ScalarProperty Name="RacunID" ColumnName="RacunID" />
+          <ScalarProperty Name="KorisnikID" ColumnName="KorisnikID" />
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Komentar" ColumnName="Komentar" />
+          <ScalarProperty Name="PDV" ColumnName="PDV" />
+          <ScalarProperty Name="Ukupno" ColumnName="Ukupno" />
+          <ScalarProperty Name="DatumFakture" ColumnName="DatumFakture" />
+          <ScalarProperty Name="DatumIsporuke" ColumnName="DatumIsporuke" />
+          <ScalarProperty Name="NacinIsporuke" ColumnName="NacinIsporuke" />
+          <ScalarProperty Name="PlacanjeID" ColumnName="PlacanjeID" />
+          <ScalarProperty Name="VoziloID" ColumnName="VoziloID" />
+          <ScalarProperty Name="DijeloviID" ColumnName="DijeloviID" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getZalihe" FunctionName="AutoSalonModel.Store.getZalihe">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AutoSalonModel.getZalihe_Result">
+          <ScalarProperty Name="Ukupno_zaliha" ColumnName="Ukupno zaliha" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getZaliheAuta" FunctionName="AutoSalonModel.Store.getZaliheAuta">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AutoSalonModel.getZaliheAuta_Result">
+          <ScalarProperty Name="Ukupno_zaliha" ColumnName="Ukupno zaliha" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getaLLNarudzbe" FunctionName="AutoSalonModel.Store.getaLLNarudzbe" />
+    <FunctionImportMapping FunctionImportName="insertIzvrseneUsluge" FunctionName="AutoSalonModel.Store.insertIzvrseneUsluge" />
+    <FunctionImportMapping FunctionImportName="insertKorisnik" FunctionName="AutoSalonModel.Store.insertKorisnik" />
+    <FunctionImportMapping FunctionImportName="insertKupac" FunctionName="AutoSalonModel.Store.insertKupac" />
+    <FunctionImportMapping FunctionImportName="insertServis" FunctionName="AutoSalonModel.Store.insertServis" />
+    <FunctionImportMapping FunctionImportName="insertUsluge" FunctionName="AutoSalonModel.Store.insertUsluge" />
+    <FunctionImportMapping FunctionImportName="insertVozilo" FunctionName="AutoSalonModel.Store.insertVozilo" />
+    <FunctionImportMapping FunctionImportName="pretragAuta" FunctionName="AutoSalonModel.Store.pretragAuta">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AutoSalonModel.pretragAuta_Result">
+          <ScalarProperty Name="VoziloID" ColumnName="VoziloID" />
+          <ScalarProperty Name="ServisID" ColumnName="ServisID" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Godiste" ColumnName="Godiste" />
+          <ScalarProperty Name="Boja" ColumnName="Boja" />
+          <ScalarProperty Name="VrstaMotora" ColumnName="VrstaMotora" />
+          <ScalarProperty Name="EmisijaCO2" ColumnName="EmisijaCO2" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="SlikaThumg" ColumnName="SlikaThumg" />
+          <ScalarProperty Name="Slika" ColumnName="Slika" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Oprema" ColumnName="Oprema" />
+          <ScalarProperty Name="SnagaMotora" ColumnName="SnagaMotora" />
+          <ScalarProperty Name="BrojSasije" ColumnName="BrojSasije" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="pretragaDijelova" FunctionName="AutoSalonModel.Store.pretragaDijelova">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AutoSalonModel.pretragaDijelova_Result">
+          <ScalarProperty Name="DijeloviID" ColumnName="DijeloviID" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Zalihe" ColumnName="Zalihe" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Sifra" ColumnName="Sifra" />
+          <ScalarProperty Name="VoziloID" ColumnName="VoziloID" />
+          <ScalarProperty Name="ProizvodjacID" ColumnName="ProizvodjacID" />
+          <ScalarProperty Name="AutaProizvedena" ColumnName="AutaProizvedena" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="selectAllVozila" FunctionName="AutoSalonModel.Store.selectAllVozila">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AutoSalonModel.selectAllVozila_Result">
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="EmisijaCO2" ColumnName="EmisijaCO2" />
+          <ScalarProperty Name="Godiste" ColumnName="Godiste" />
+          <ScalarProperty Name="SlikaThumg" ColumnName="SlikaThumg" />
+          <ScalarProperty Name="VrstaMotora" ColumnName="VrstaMotora" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="selectIme" FunctionName="AutoSalonModel.Store.selectIme" />
+    <FunctionImportMapping FunctionImportName="selectKorisnickoIme" FunctionName="AutoSalonModel.Store.selectKorisnickoIme" />
+    <FunctionImportMapping FunctionImportName="selectKupacKorisinickoIme" FunctionName="AutoSalonModel.Store.selectKupacKorisinickoIme" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="AutoSalonModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="AutoSalonModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="AutoSalonModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="AutoSalonModel.Store.sp_helpdiagramdefinition" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="AutoSalonModel.Store.sp_helpdiagrams" />
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="AutoSalonModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="AutoSalonModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="updateAuta" FunctionName="AutoSalonModel.Store.updateAuta" />
+    <FunctionImportMapping FunctionImportName="updateDijelovi" FunctionName="AutoSalonModel.Store.updateDijelovi" />
+    <FunctionImportMapping FunctionImportName="updateNarudzba" FunctionName="AutoSalonModel.Store.updateNarudzba" />
+    <FunctionImportMapping FunctionImportName="updateNarudzbaStatus" FunctionName="AutoSalonModel.Store.updateNarudzbaStatus" />
+    <FunctionImportMapping FunctionImportName="vijezba" FunctionName="AutoSalonModel.Store.vijezba" />
+    <EntitySetMapping Name="Vozilo">
+      <EntityTypeMapping TypeName="AutoSalonModel.Vozilo">
+        <MappingFragment StoreEntitySet="Vozilo">
+          <ScalarProperty Name="BrojSasije" ColumnName="BrojSasije" />
+          <ScalarProperty Name="SnagaMotora" ColumnName="SnagaMotora" />
+          <ScalarProperty Name="Oprema" ColumnName="Oprema" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Slika" ColumnName="Slika" />
+          <ScalarProperty Name="SlikaThumg" ColumnName="SlikaThumg" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="EmisijaCO2" ColumnName="EmisijaCO2" />
+          <ScalarProperty Name="VrstaMotora" ColumnName="VrstaMotora" />
+          <ScalarProperty Name="Boja" ColumnName="Boja" />
+          <ScalarProperty Name="Godiste" ColumnName="Godiste" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="KorisnikID" ColumnName="KorisnikID" />
+          <ScalarProperty Name="VoziloID" ColumnName="VoziloID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dijelovi">
+      <EntityTypeMapping TypeName="AutoSalonModel.Dijelovi">
+        <MappingFragment StoreEntitySet="Dijelovi">
+          <ScalarProperty Name="AutaProizvedena" ColumnName="AutaProizvedena" />
+          <ScalarProperty Name="ProizvodjacID" ColumnName="ProizvodjacID" />
+          <ScalarProperty Name="VoziloID" ColumnName="VoziloID" />
+          <ScalarProperty Name="Sifra" ColumnName="Sifra" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Zalihe" ColumnName="Zalihe" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="DijeloviID" ColumnName="DijeloviID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="DijeloviSearch" FunctionName="AutoSalonModel.Store.DijeloviSearch">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AutoSalonModel.DijeloviSearch_Result2">
+          <ScalarProperty Name="DijeloviID" ColumnName="DijeloviID" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Zalihe" ColumnName="Zalihe" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Sifra" ColumnName="Sifra" />
+          <ScalarProperty Name="VoziloID" ColumnName="VoziloID" />
+          <ScalarProperty Name="ProizvodjacID" ColumnName="ProizvodjacID" />
+          <ScalarProperty Name="AutaProizvedena" ColumnName="AutaProizvedena" />
+          <ScalarProperty Name="NazivProizvodjaca" ColumnName="NazivProizvodjaca" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DijeloviAllGet" FunctionName="AutoSalonModel.Store.DijeloviAllGet">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AutoSalonModel.DijeloviAllGet_Result">
+          <ScalarProperty Name="DijeloviID" ColumnName="DijeloviID" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Zalihe" ColumnName="Zalihe" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Sifra" ColumnName="Sifra" />
+          <ScalarProperty Name="VoziloID" ColumnName="VoziloID" />
+          <ScalarProperty Name="ProizvodjacID" ColumnName="ProizvodjacID" />
+          <ScalarProperty Name="AutaProizvedena" ColumnName="AutaProizvedena" />
+          <ScalarProperty Name="NazivProizvodjaca" ColumnName="NazivProizvodjaca" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getAllKupci" FunctionName="AutoSalonModel.Store.getAllKupci" />
+    <FunctionImportMapping FunctionImportName="GETALLDijelove" FunctionName="AutoSalonModel.Store.GETALLDijelove">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AutoSalonModel.GETALLDijelove_Result1">
+          <ScalarProperty Name="DijeloviID" ColumnName="DijeloviID" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Zalihe" ColumnName="Zalihe" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Sifra" ColumnName="Sifra" />
+          <ScalarProperty Name="VoziloID" ColumnName="VoziloID" />
+          <ScalarProperty Name="ProizvodjacID" ColumnName="ProizvodjacID" />
+          <ScalarProperty Name="AutaProizvedena" ColumnName="AutaProizvedena" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetInfo" FunctionName="AutoSalonModel.Store.GetInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AutoSalonModel.GetInfo_Result1">
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Prodato" ColumnName="Prodato" />
+          <ScalarProperty Name="Zarada" ColumnName="Zarada" />
+          <ScalarProperty Name="Zaliha" ColumnName="Zaliha" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectIDAuto" FunctionName="AutoSalonModel.Store.SelectIDAuto">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AutoSalonModel.SelectIDAuto_Result3">
+          <ScalarProperty Name="VoziloID" ColumnName="VoziloID" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Boja" ColumnName="Boja" />
+          <ScalarProperty Name="Godiste" ColumnName="Godiste" />
+          <ScalarProperty Name="EmisijaCO2" ColumnName="EmisijaCO2" />
+          <ScalarProperty Name="SlikaThumg" ColumnName="SlikaThumg" />
+          <ScalarProperty Name="VrstaMotora" ColumnName="VrstaMotora" />
+          <ScalarProperty Name="KorisnikID" ColumnName="KorisnikID" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="BrojSasije" ColumnName="BrojSasije" />
+          <ScalarProperty Name="Oprema" ColumnName="Oprema" />
+          <ScalarProperty Name="SnagaMotora" ColumnName="SnagaMotora" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Kupci">
+      <EntityTypeMapping TypeName="AutoSalonModel.Kupci">
+        <MappingFragment StoreEntitySet="Kupci">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Datumkupovine" ColumnName="Datumkupovine" />
+          <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
+          <ScalarProperty Name="KupacID" ColumnName="KupacID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GEtNazivAutaALL" FunctionName="AutoSalonModel.Store.GEtNazivAutaALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AutoSalonModel.GEtNazivAutaALL_Result">
+          <ScalarProperty Name="VoziloID" ColumnName="VoziloID" />
+          <ScalarProperty Name="KorisnikID" ColumnName="KorisnikID" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Godiste" ColumnName="Godiste" />
+          <ScalarProperty Name="Boja" ColumnName="Boja" />
+          <ScalarProperty Name="VrstaMotora" ColumnName="VrstaMotora" />
+          <ScalarProperty Name="EmisijaCO2" ColumnName="EmisijaCO2" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="SlikaThumg" ColumnName="SlikaThumg" />
+          <ScalarProperty Name="Slika" ColumnName="Slika" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Oprema" ColumnName="Oprema" />
+          <ScalarProperty Name="SnagaMotora" ColumnName="SnagaMotora" />
+          <ScalarProperty Name="BrojSasije" ColumnName="BrojSasije" />
+          <ScalarProperty Name="Kolicina" ColumnName="Kolicina" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GEtALLAuta" FunctionName="AutoSalonModel.Store.GEtALLAuta">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AutoSalonModel.GEtALLAuta_Result1">
+          <ScalarProperty Name="VoziloID" ColumnName="VoziloID" />
+          <ScalarProperty Name="KorisnikID" ColumnName="KorisnikID" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Godiste" ColumnName="Godiste" />
+          <ScalarProperty Name="Boja" ColumnName="Boja" />
+          <ScalarProperty Name="VrstaMotora" ColumnName="VrstaMotora" />
+          <ScalarProperty Name="EmisijaCO2" ColumnName="EmisijaCO2" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="SlikaThumg" ColumnName="SlikaThumg" />
+          <ScalarProperty Name="Slika" ColumnName="Slika" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Oprema" ColumnName="Oprema" />
+          <ScalarProperty Name="SnagaMotora" ColumnName="SnagaMotora" />
+          <ScalarProperty Name="BrojSasije" ColumnName="BrojSasije" />
+          <ScalarProperty Name="Kolicina" ColumnName="Kolicina" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="searchModel" FunctionName="AutoSalonModel.Store.searchModel">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AutoSalonModel.searchModel_Result">
+          <ScalarProperty Name="VoziloID" ColumnName="VoziloID" />
+          <ScalarProperty Name="KorisnikID" ColumnName="KorisnikID" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Godiste" ColumnName="Godiste" />
+          <ScalarProperty Name="Boja" ColumnName="Boja" />
+          <ScalarProperty Name="VrstaMotora" ColumnName="VrstaMotora" />
+          <ScalarProperty Name="EmisijaCO2" ColumnName="EmisijaCO2" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="SlikaThumg" ColumnName="SlikaThumg" />
+          <ScalarProperty Name="Slika" ColumnName="Slika" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Oprema" ColumnName="Oprema" />
+          <ScalarProperty Name="SnagaMotora" ColumnName="SnagaMotora" />
+          <ScalarProperty Name="BrojSasije" ColumnName="BrojSasije" />
+          <ScalarProperty Name="Kolicina" ColumnName="Kolicina" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="RacuniAuta" FunctionName="AutoSalonModel.Store.RacuniAuta">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AutoSalonModel.RacuniAuta_Result">
+          <ScalarProperty Name="Automobil" ColumnName="Automobil" />
+          <ScalarProperty Name="Oprema" ColumnName="Oprema" />
+          <ScalarProperty Name="VrstaModela" ColumnName="VrstaModela" />
+          <ScalarProperty Name="SnagaMotora" ColumnName="SnagaMotora" />
+          <ScalarProperty Name="BrojSasije" ColumnName="BrojSasije" />
+          <ScalarProperty Name="NacinPlacanja" ColumnName="NacinPlacanja" />
+          <ScalarProperty Name="RacunID" ColumnName="RacunID" />
+          <ScalarProperty Name="KorisnikID" ColumnName="KorisnikID" />
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Komentar" ColumnName="Komentar" />
+          <ScalarProperty Name="PDV" ColumnName="PDV" />
+          <ScalarProperty Name="Ukupno" ColumnName="Ukupno" />
+          <ScalarProperty Name="DatumFakture" ColumnName="DatumFakture" />
+          <ScalarProperty Name="DatumIsporuke" ColumnName="DatumIsporuke" />
+          <ScalarProperty Name="NacinIsporuke" ColumnName="NacinIsporuke" />
+          <ScalarProperty Name="PlacanjeID" ColumnName="PlacanjeID" />
+          <ScalarProperty Name="VoziloID" ColumnName="VoziloID" />
+          <ScalarProperty Name="DijeloviID" ColumnName="DijeloviID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="RacuniDijelovi" FunctionName="AutoSalonModel.Store.RacuniDijelovi">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AutoSalonModel.RacuniDijelovi_Result">
+          <ScalarProperty Name="Dijelovi" ColumnName="Dijelovi" />
+          <ScalarProperty Name="Sifra" ColumnName="Sifra" />
+          <ScalarProperty Name="NacinPlacanja" ColumnName="NacinPlacanja" />
+          <ScalarProperty Name="RacunID" ColumnName="RacunID" />
+          <ScalarProperty Name="KorisnikID" ColumnName="KorisnikID" />
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Komentar" ColumnName="Komentar" />
+          <ScalarProperty Name="PDV" ColumnName="PDV" />
+          <ScalarProperty Name="Ukupno" ColumnName="Ukupno" />
+          <ScalarProperty Name="DatumFakture" ColumnName="DatumFakture" />
+          <ScalarProperty Name="DatumIsporuke" ColumnName="DatumIsporuke" />
+          <ScalarProperty Name="NacinIsporuke" ColumnName="NacinIsporuke" />
+          <ScalarProperty Name="PlacanjeID" ColumnName="PlacanjeID" />
+          <ScalarProperty Name="VoziloID" ColumnName="VoziloID" />
+          <ScalarProperty Name="DijeloviID" ColumnName="DijeloviID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

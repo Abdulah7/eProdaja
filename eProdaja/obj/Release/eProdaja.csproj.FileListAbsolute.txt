@@ -1,0 +1,10 @@
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Release\eProdaja.frmLogin.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Release\eProdaja.Forme.frmNovoAuto.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Release\eProdaja.Forme.frmPretragaKorisnika.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Release\eProdaja.Forme.frmPristup.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Release\eProdaja.frmServis.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Release\eProdaja.MainForma.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Release\eProdaja.Properties.Resources.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Release\eProdaja.frmUsluge.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Release\eProdaja.Poruke.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Release\eProdaja.csproj.GenerateResource.Cache

@@ -1,0 +1,812 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AutoSalonModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Dijelovi">
+    <Key>
+      <PropertyRef Name="DioID" />
+    </Key>
+    <Property Name="DioID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Naziv" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Zalihe" Type="int" Nullable="false" />
+    <Property Name="Cijena" Type="float" Nullable="false" />
+    <Property Name="Sifra" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ProizvodjacID" Type="int" Nullable="false" />
+    <Property Name="AutaProizvedena" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Opis" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Korisnici">
+    <Key>
+      <PropertyRef Name="KorisnikID" />
+    </Key>
+    <Property Name="KorisnikID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ime" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Prezime" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Adresa" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Telefon" Type="nvarchar" MaxLength="30" />
+    <Property Name="Email" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="LozinkaHash" Type="nvarchar" MaxLength="30" />
+    <Property Name="SalonID" Type="int" />
+    <Property Name="LozinkaSalt" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Kupci">
+    <Key>
+      <PropertyRef Name="KupacID" />
+    </Key>
+    <Property Name="KupacID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ime" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Prezime" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Telefon" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Adresa" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Lozinka" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Kvarovi">
+    <Key>
+      <PropertyRef Name="KvarID" />
+    </Key>
+    <Property Name="KvarID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Opis" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="KupacID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Modeli">
+    <Key>
+      <PropertyRef Name="ModelID" />
+    </Key>
+    <Property Name="ModelID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProizvodjacID" Type="int" Nullable="false" />
+    <Property Name="Naziv" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="VrstaModela" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NaciniPlacanja">
+    <Key>
+      <PropertyRef Name="PlacanjeID" />
+    </Key>
+    <Property Name="PlacanjeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Naziv" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Notifikacija">
+    <Key>
+      <PropertyRef Name="NotifikacijaID" />
+    </Key>
+    <Property Name="NotifikacijaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Naslov" Type="nvarchar" MaxLength="30" />
+    <Property Name="Opis" Type="nvarchar" MaxLength="200" />
+    <Property Name="Vrijeme" Type="datetime" />
+    <Property Name="KupacID" Type="int" />
+    <Property Name="IsRead" Type="bit" />
+  </EntityType>
+  <EntityType Name="Pitanja">
+    <Key>
+      <PropertyRef Name="PitanjeID" />
+    </Key>
+    <Property Name="PitanjeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Opis" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="KupacID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Proizvodjaci">
+    <Key>
+      <PropertyRef Name="ProizvodjacID" />
+    </Key>
+    <Property Name="ProizvodjacID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Naziv" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Adresa" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Telefon" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Racuni">
+    <Key>
+      <PropertyRef Name="RacunID" />
+    </Key>
+    <Property Name="RacunID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KorisnikID" Type="int" Nullable="false" />
+    <Property Name="Cijena" Type="float" Nullable="false" />
+    <Property Name="Komentar" Type="nvarchar" MaxLength="100" />
+    <Property Name="PDV" Type="float" Nullable="false" />
+    <Property Name="Ukupno" Type="float" Nullable="false" />
+    <Property Name="DatumFakture" Type="datetime" Nullable="false" />
+    <Property Name="DatumIsporuke" Type="datetime" />
+    <Property Name="NacinIsporuke" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="PlacanjeID" Type="int" Nullable="false" />
+    <Property Name="KupacID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RacuniStavke">
+    <Key>
+      <PropertyRef Name="StavkaID" />
+    </Key>
+    <Property Name="StavkaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DijeloviID" Type="int" />
+    <Property Name="VoziloID" Type="int" />
+    <Property Name="RacunID" Type="int" />
+    <Property Name="Kolicina" Type="int" Nullable="false" />
+    <Property Name="Popust" Type="float" />
+    <Property Name="Rabat" Type="float" />
+  </EntityType>
+  <EntityType Name="SalonAuta">
+    <Key>
+      <PropertyRef Name="SalonID" />
+    </Key>
+    <Property Name="SalonID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Naziv" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Adresa" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Sjedište" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Telefon" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Vozila">
+    <Key>
+      <PropertyRef Name="VoziloID" />
+    </Key>
+    <Property Name="VoziloID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Naziv" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Godiste" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Boja" Type="nvarchar" MaxLength="30" />
+    <Property Name="VrstaMotora" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="EmisijaCO2" Type="nvarchar" MaxLength="20" />
+    <Property Name="ModelID" Type="int" Nullable="false" />
+    <Property Name="SlikaThumg" Type="varbinary(max)" Nullable="false" />
+    <Property Name="Slika" Type="varbinary(max)" Nullable="false" />
+    <Property Name="Cijena" Type="float" Nullable="false" />
+    <Property Name="Oprema" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="SnagaMotora" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="BrojSasije" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ZapreminaMotora" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="ZapreminaGepeka" Type="nvarchar" MaxLength="15" />
+    <Property Name="Duzina" Type="nvarchar" MaxLength="15" />
+    <Property Name="Tezina" Type="nvarchar" MaxLength="15" />
+    <Property Name="Klima" Type="nvarchar" MaxLength="30" />
+    <Property Name="BrojSjedista" Type="int" />
+    <Property Name="Pogon" Type="nvarchar" MaxLength="15" />
+    <Property Name="BrojVrata" Type="int" />
+    <Property Name="OpisSigurnost" Type="nvarchar" MaxLength="200" />
+    <Property Name="Mijenjac" Type="nvarchar" MaxLength="30" />
+    <Property Name="Potrosnja" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="ObrtniMoment" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sirina" Type="nvarchar" MaxLength="20" />
+    <Property Name="Ubrzanje" Type="nvarchar" MaxLength="20" />
+    <Property Name="MaksimalnaBrzina" Type="nvarchar" MaxLength="20" />
+    <Property Name="Kolicina" Type="int" />
+  </EntityType>
+  <Association Name="FK__Dijelovi__Proizv__3C69FB99">
+    <End Role="Proizvodjaci" Type="Self.Proizvodjaci" Multiplicity="1" />
+    <End Role="Dijelovi" Type="Self.Dijelovi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proizvodjaci">
+        <PropertyRef Name="ProizvodjacID" />
+      </Principal>
+      <Dependent Role="Dijelovi">
+        <PropertyRef Name="ProizvodjacID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Korisnici__Salon__3D5E1FD2">
+    <End Role="SalonAuta" Type="Self.SalonAuta" Multiplicity="0..1" />
+    <End Role="Korisnici" Type="Self.Korisnici" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalonAuta">
+        <PropertyRef Name="SalonID" />
+      </Principal>
+      <Dependent Role="Korisnici">
+        <PropertyRef Name="SalonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Kvarovi__KupacID__3E52440B">
+    <End Role="Kupci" Type="Self.Kupci" Multiplicity="1" />
+    <End Role="Kvarovi" Type="Self.Kvarovi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kupci">
+        <PropertyRef Name="KupacID" />
+      </Principal>
+      <Dependent Role="Kvarovi">
+        <PropertyRef Name="KupacID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Modeli__Proizvod__3F466844">
+    <End Role="Proizvodjaci" Type="Self.Proizvodjaci" Multiplicity="1" />
+    <End Role="Modeli" Type="Self.Modeli" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proizvodjaci">
+        <PropertyRef Name="ProizvodjacID" />
+      </Principal>
+      <Dependent Role="Modeli">
+        <PropertyRef Name="ProizvodjacID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Notifikac__Kupac__403A8C7D">
+    <End Role="Kupci" Type="Self.Kupci" Multiplicity="0..1" />
+    <End Role="Notifikacija" Type="Self.Notifikacija" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kupci">
+        <PropertyRef Name="KupacID" />
+      </Principal>
+      <Dependent Role="Notifikacija">
+        <PropertyRef Name="KupacID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Pitanja__KupacID__4316F928">
+    <End Role="Kupci" Type="Self.Kupci" Multiplicity="1" />
+    <End Role="Pitanja" Type="Self.Pitanja" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kupci">
+        <PropertyRef Name="KupacID" />
+      </Principal>
+      <Dependent Role="Pitanja">
+        <PropertyRef Name="KupacID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Racuni__Korisnik__45F365D3">
+    <End Role="Korisnici" Type="Self.Korisnici" Multiplicity="1" />
+    <End Role="Racuni" Type="Self.Racuni" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Korisnici">
+        <PropertyRef Name="KorisnikID" />
+      </Principal>
+      <Dependent Role="Racuni">
+        <PropertyRef Name="KorisnikID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Racuni__KupacID__440B1D61">
+    <End Role="Kupci" Type="Self.Kupci" Multiplicity="1" />
+    <End Role="Racuni" Type="Self.Racuni" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kupci">
+        <PropertyRef Name="KupacID" />
+      </Principal>
+      <Dependent Role="Racuni">
+        <PropertyRef Name="KupacID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Racuni__Placanje__44FF419A">
+    <End Role="NaciniPlacanja" Type="Self.NaciniPlacanja" Multiplicity="1" />
+    <End Role="Racuni" Type="Self.Racuni" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NaciniPlacanja">
+        <PropertyRef Name="PlacanjeID" />
+      </Principal>
+      <Dependent Role="Racuni">
+        <PropertyRef Name="PlacanjeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RacuniSta__Dijel__46E78A0C">
+    <End Role="Dijelovi" Type="Self.Dijelovi" Multiplicity="0..1" />
+    <End Role="RacuniStavke" Type="Self.RacuniStavke" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dijelovi">
+        <PropertyRef Name="DioID" />
+      </Principal>
+      <Dependent Role="RacuniStavke">
+        <PropertyRef Name="DijeloviID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RacuniSta__Racun__47DBAE45">
+    <End Role="Racuni" Type="Self.Racuni" Multiplicity="0..1" />
+    <End Role="RacuniStavke" Type="Self.RacuniStavke" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Racuni">
+        <PropertyRef Name="RacunID" />
+      </Principal>
+      <Dependent Role="RacuniStavke">
+        <PropertyRef Name="RacunID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RacuniSta__Vozil__48CFD27E">
+    <End Role="Vozila" Type="Self.Vozila" Multiplicity="0..1" />
+    <End Role="RacuniStavke" Type="Self.RacuniStavke" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vozila">
+        <PropertyRef Name="VoziloID" />
+      </Principal>
+      <Dependent Role="RacuniStavke">
+        <PropertyRef Name="VoziloID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Vozila__ModelID__49C3F6B7">
+    <End Role="Modeli" Type="Self.Modeli" Multiplicity="1" />
+    <End Role="Vozila" Type="Self.Vozila" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modeli">
+        <PropertyRef Name="ModelID" />
+      </Principal>
+      <Dependent Role="Vozila">
+        <PropertyRef Name="ModelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="ALLCars" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ime" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AutaALLGET" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="AutaDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="voziloid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="AutaID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAuta" Type="int" Mode="In" />
+  </Function>
+  <Function Name="BrisanjeAuta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="autoId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteKupac" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="KupacId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteModel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="modelid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteProizvodjac" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DijeloviAllGet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="DijeloviDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dijeloviID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DijeloviSearch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="naziv" Type="nvarchar" Mode="In" />
+    <Parameter Name="sifra" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DijeloviUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dioid" Type="int" Mode="In" />
+    <Parameter Name="naziv" Type="nvarchar" Mode="In" />
+    <Parameter Name="zalihe" Type="int" Mode="In" />
+    <Parameter Name="cijena" Type="float" Mode="In" />
+    <Parameter Name="sifra" Type="nvarchar" Mode="In" />
+    <Parameter Name="proizvodjac" Type="int" Mode="In" />
+    <Parameter Name="autap" Type="nvarchar" Mode="In" />
+    <Parameter Name="Opis" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DijelovigetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dioID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GETALLDijelove" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GETDIJELOVE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Naziv" Type="nvarchar" Mode="In" />
+    <Parameter Name="Offset" Type="int" Mode="In" />
+    <Parameter Name="MaxRows" Type="int" Mode="In" />
+    <Parameter Name="TotalRows" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GETDijeloviID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dioID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GETProdajaInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GEtALLAuta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GEtIDModel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="modelid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GEtNarudzbaID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Idnarudzba" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GEtNazivAutaALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="naziv" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GEtNazivDijelovaALl" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="naziv" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetAllStavke" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetAutaRacunStavke" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="racunid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetAutaStavke" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="racunid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetDijeloviRacunStavke" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="racunid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetDijeloviStavke" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="racunid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetIDKupacRacun" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="kupacid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetInfoUkupno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetKupacIME" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ime" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetModele" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetProzvodjac" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetVoziloID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="VoziloID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="IDProizvodjac" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="racun" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertDijelove" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="naziv" Type="nvarchar" Mode="In" />
+    <Parameter Name="zalihe" Type="int" Mode="In" />
+    <Parameter Name="cijena" Type="float" Mode="In" />
+    <Parameter Name="sifra" Type="nvarchar" Mode="In" />
+    <Parameter Name="proizvodjacid" Type="int" Mode="In" />
+    <Parameter Name="autaproiz" Type="nvarchar" Mode="In" />
+    <Parameter Name="opis" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="InsertModel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="proizovjdac" Type="int" Mode="In" />
+    <Parameter Name="naziv" Type="nvarchar" Mode="In" />
+    <Parameter Name="tip" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="InsertProizvodjac" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="naziv" Type="nvarchar" Mode="In" />
+    <Parameter Name="Adresa" Type="nvarchar" Mode="In" />
+    <Parameter Name="Telefon" Type="nvarchar" Mode="In" />
+    <Parameter Name="email" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="InsertRacun" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="servisid" Type="int" Mode="In" />
+    <Parameter Name="cijena" Type="float" Mode="In" />
+    <Parameter Name="komenatar" Type="nvarchar" Mode="In" />
+    <Parameter Name="Pdv" Type="float" Mode="In" />
+    <Parameter Name="ukupno" Type="float" Mode="In" />
+    <Parameter Name="nacinisporuke" Type="nvarchar" Mode="In" />
+    <Parameter Name="datumFa" Type="datetime" Mode="In" />
+    <Parameter Name="datumI" Type="datetime" Mode="In" />
+    <Parameter Name="Placanje" Type="int" Mode="In" />
+    <Parameter Name="kupacid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertRacunStavke" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Dio" Type="int" Mode="In" />
+    <Parameter Name="Vozilo" Type="int" Mode="In" />
+    <Parameter Name="Racun" Type="int" Mode="In" />
+    <Parameter Name="Kolicina" Type="float" Mode="In" />
+    <Parameter Name="popust" Type="float" Mode="In" />
+    <Parameter Name="rabat" Type="float" Mode="In" />
+  </Function>
+  <Function Name="IzmjenaAuta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="VozID" Type="int" Mode="In" />
+    <Parameter Name="ModelID" Type="int" Mode="In" />
+    <Parameter Name="NAZIV" Type="nvarchar" Mode="In" />
+    <Parameter Name="Boja" Type="nvarchar" Mode="In" />
+    <Parameter Name="Godiste" Type="nvarchar" Mode="In" />
+    <Parameter Name="VrstaMotora" Type="nvarchar" Mode="In" />
+    <Parameter Name="Emisija" Type="nvarchar" Mode="In" />
+    <Parameter Name="Slika" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="SlikaThumb" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="Cijena" Type="float" Mode="In" />
+    <Parameter Name="oprema" Type="nvarchar" Mode="In" />
+    <Parameter Name="snagamotora" Type="nvarchar" Mode="In" />
+    <Parameter Name="brojsasije" Type="nvarchar" Mode="In" />
+    <Parameter Name="zapreminam" Type="nvarchar" Mode="In" />
+    <Parameter Name="bzapreminag" Type="nvarchar" Mode="In" />
+    <Parameter Name="duzina" Type="nvarchar" Mode="In" />
+    <Parameter Name="tezina" Type="nvarchar" Mode="In" />
+    <Parameter Name="klima" Type="nvarchar" Mode="In" />
+    <Parameter Name="brojsjedista" Type="int" Mode="In" />
+    <Parameter Name="pogon" Type="nvarchar" Mode="In" />
+    <Parameter Name="brojv" Type="int" Mode="In" />
+    <Parameter Name="opisS" Type="nvarchar" Mode="In" />
+    <Parameter Name="mijenjac" Type="nvarchar" Mode="In" />
+    <Parameter Name="potrosnja" Type="nvarchar" Mode="In" />
+    <Parameter Name="obrtnimoment" Type="nvarchar" Mode="In" />
+    <Parameter Name="sirina" Type="nvarchar" Mode="In" />
+    <Parameter Name="ubrzanje" Type="nvarchar" Mode="In" />
+    <Parameter Name="maxbrzina" Type="nvarchar" Mode="In" />
+    <Parameter Name="kolicina" Type="int" Mode="In" />
+  </Function>
+  <Function Name="KupciGEtAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="PretragaAuta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="naziv" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="PretragaKupaca" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ime" Type="nvarchar" Mode="In" />
+    <Parameter Name="prezime" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="PretragaPoNazivuAuta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="naziv" Type="nvarchar" Mode="In" />
+    <Parameter Name="sasija" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="ProdajaAutaInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="ProdajaAutaInfoU" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="ProizvodjaciUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="naziv" Type="nvarchar" Mode="In" />
+    <Parameter Name="adresa" Type="nvarchar" Mode="In" />
+    <Parameter Name="telefon" Type="nvarchar" Mode="In" />
+    <Parameter Name="email" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="RAcunaiiiiia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="RacunGET" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="RacunSelectByDatum" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="datumP" Type="datetime" Mode="In" />
+    <Parameter Name="datumI" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="RacuniAuta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="RacuniDijelovi" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SearchKupac" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Ime" Type="nvarchar" Mode="In" />
+    <Parameter Name="Prezime" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SearchVozila" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vozilo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectALLModele" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="naziv" Type="nvarchar" Mode="In" />
+    <Parameter Name="vrstamodela" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectIDAuto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ModelId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SelectServis" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Servis_IzmjenaPassworda" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="korisnik" Type="int" Mode="In" />
+    <Parameter Name="LozinkaSalt" Type="nvarchar" Mode="In" />
+    <Parameter Name="LozinkaHash" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Servis_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ServisID" Type="int" Mode="In" />
+    <Parameter Name="ime" Type="nvarchar" Mode="In" />
+    <Parameter Name="prezime" Type="nvarchar" Mode="In" />
+    <Parameter Name="Adresa" Type="nvarchar" Mode="In" />
+    <Parameter Name="Telefon" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="status" Type="bit" Mode="In" />
+    <Parameter Name="LozinkaHash" Type="nvarchar" Mode="In" />
+    <Parameter Name="Salon" Type="int" Mode="In" />
+    <Parameter Name="LozinkaSalt" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateKupca" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="int" Mode="In" />
+    <Parameter Name="Ime" Type="nvarchar" Mode="In" />
+    <Parameter Name="Prezime" Type="nvarchar" Mode="In" />
+    <Parameter Name="email" Type="nvarchar" Mode="In" />
+    <Parameter Name="telefon" Type="nvarchar" Mode="In" />
+    <Parameter Name="adresa" Type="nvarchar" Mode="In" />
+    <Parameter Name="lozinka" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateModel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="modelid" Type="int" Mode="In" />
+    <Parameter Name="proid" Type="int" Mode="In" />
+    <Parameter Name="naziv" Type="nvarchar" Mode="In" />
+    <Parameter Name="vrstamodela" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="VOZILA_MODEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ModelID" Type="int" Mode="In" />
+    <Parameter Name="Naziv" Type="nvarchar" Mode="In" />
+    <Parameter Name="Offset" Type="int" Mode="In" />
+    <Parameter Name="MaxRows" Type="int" Mode="In" />
+    <Parameter Name="TotalRows" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="deleteKorisnik" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="korisnik" Type="int" Mode="In" />
+  </Function>
+  <Function Name="esp_ServisSelectID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ServisID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="esp_select_by_Name" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Name" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="esp_update_status" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="korisnik" Type="int" Mode="In" />
+    <Parameter Name="Status" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="getAllKupci" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="getAllProdajaAuta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="getAllServis" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="getIDKupac" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="kupacID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="getRAcunID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="racun" Type="int" Mode="In" />
+  </Function>
+  <Function Name="getRAcuniallFilter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="getRacun1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="getRacunStavke" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="getRacuniStavke" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="getUkupno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="racunid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="getZalihe" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="getZaliheAuta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="insertKorisnik" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ime" Type="nvarchar" Mode="In" />
+    <Parameter Name="prezime" Type="nvarchar" Mode="In" />
+    <Parameter Name="Adresa" Type="nvarchar" Mode="In" />
+    <Parameter Name="Telefon" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="Status" Type="bit" Mode="In" />
+    <Parameter Name="LozinkaHash" Type="nvarchar" Mode="In" />
+    <Parameter Name="SalonID" Type="int" Mode="In" />
+    <Parameter Name="LozinkaSalt" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="insertKupac" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Ime" Type="nvarchar" Mode="In" />
+    <Parameter Name="Prezime" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="telefon" Type="nvarchar" Mode="In" />
+    <Parameter Name="adresa" Type="nvarchar" Mode="In" />
+    <Parameter Name="lozinka" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="insertServis" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ime" Type="nvarchar" Mode="In" />
+    <Parameter Name="prezime" Type="nvarchar" Mode="In" />
+    <Parameter Name="Adresa" Type="nvarchar" Mode="In" />
+    <Parameter Name="Telefon" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="Status" Type="bit" Mode="In" />
+    <Parameter Name="LozinkaHash" Type="nvarchar" Mode="In" />
+    <Parameter Name="SalonID" Type="int" Mode="In" />
+    <Parameter Name="LozinkaSalt" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="insertUsluge" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Naziv" Type="nvarchar" Mode="In" />
+    <Parameter Name="Cijena" Type="float" Mode="In" />
+    <Parameter Name="Komentar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="insertVozilo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ModelID" Type="int" Mode="In" />
+    <Parameter Name="NAZIV" Type="nvarchar" Mode="In" />
+    <Parameter Name="Boja" Type="nvarchar" Mode="In" />
+    <Parameter Name="Godiste" Type="nvarchar" Mode="In" />
+    <Parameter Name="VrstaMotora" Type="nvarchar" Mode="In" />
+    <Parameter Name="Emisija" Type="nvarchar" Mode="In" />
+    <Parameter Name="Slika" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="SlikaThumb" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="Cijena" Type="float" Mode="In" />
+    <Parameter Name="oprema" Type="nvarchar" Mode="In" />
+    <Parameter Name="snagamotora" Type="nvarchar" Mode="In" />
+    <Parameter Name="brojsasije" Type="nvarchar" Mode="In" />
+    <Parameter Name="zapreminam" Type="nvarchar" Mode="In" />
+    <Parameter Name="bzapreminag" Type="nvarchar" Mode="In" />
+    <Parameter Name="duzina" Type="nvarchar" Mode="In" />
+    <Parameter Name="tezina" Type="nvarchar" Mode="In" />
+    <Parameter Name="klima" Type="nvarchar" Mode="In" />
+    <Parameter Name="brojsjedista" Type="int" Mode="In" />
+    <Parameter Name="pogon" Type="nvarchar" Mode="In" />
+    <Parameter Name="brojv" Type="int" Mode="In" />
+    <Parameter Name="opisS" Type="nvarchar" Mode="In" />
+    <Parameter Name="mijenjac" Type="nvarchar" Mode="In" />
+    <Parameter Name="potrosnja" Type="nvarchar" Mode="In" />
+    <Parameter Name="obrtnimoment" Type="nvarchar" Mode="In" />
+    <Parameter Name="sirina" Type="nvarchar" Mode="In" />
+    <Parameter Name="ubrzanje" Type="nvarchar" Mode="In" />
+    <Parameter Name="maxbrzina" Type="nvarchar" Mode="In" />
+    <Parameter Name="kolicina" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pretragAuta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="auta" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="pretragaDijelova" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dio" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="searchModel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="naziv" Type="nvarchar" Mode="In" />
+    <Parameter Name="sifra" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="selectAllVozila" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="selectIme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ImeKorisnika" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="selectKorisnickoIme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ImeKorisnika" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="selectKupacKorisinickoIme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ime" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="updateAuta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="void" Type="int" Mode="In" />
+    <Parameter Name="kolicina" Type="int" Mode="In" />
+  </Function>
+  <Function Name="updateDijelovi" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dijeID" Type="int" Mode="In" />
+    <Parameter Name="zalihe" Type="int" Mode="In" />
+  </Function>
+  <Function Name="update_statusTrue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="korisnik" Type="int" Mode="In" />
+    <Parameter Name="Status" Type="bit" Mode="In" />
+  </Function>
+  <EntityContainer Name="AutoSalonModelStoreContainer">
+    <EntitySet Name="Dijelovi" EntityType="Self.Dijelovi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Korisnici" EntityType="Self.Korisnici" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kupci" EntityType="Self.Kupci" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kvarovi" EntityType="Self.Kvarovi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Modeli" EntityType="Self.Modeli" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NaciniPlacanja" EntityType="Self.NaciniPlacanja" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Notifikacija" EntityType="Self.Notifikacija" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pitanja" EntityType="Self.Pitanja" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Proizvodjaci" EntityType="Self.Proizvodjaci" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Racuni" EntityType="Self.Racuni" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RacuniStavke" EntityType="Self.RacuniStavke" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SalonAuta" EntityType="Self.SalonAuta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vozila" EntityType="Self.Vozila" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Dijelovi__Proizv__3C69FB99" Association="Self.FK__Dijelovi__Proizv__3C69FB99">
+      <End Role="Proizvodjaci" EntitySet="Proizvodjaci" />
+      <End Role="Dijelovi" EntitySet="Dijelovi" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Korisnici__Salon__3D5E1FD2" Association="Self.FK__Korisnici__Salon__3D5E1FD2">
+      <End Role="SalonAuta" EntitySet="SalonAuta" />
+      <End Role="Korisnici" EntitySet="Korisnici" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Kvarovi__KupacID__3E52440B" Association="Self.FK__Kvarovi__KupacID__3E52440B">
+      <End Role="Kupci" EntitySet="Kupci" />
+      <End Role="Kvarovi" EntitySet="Kvarovi" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Modeli__Proizvod__3F466844" Association="Self.FK__Modeli__Proizvod__3F466844">
+      <End Role="Proizvodjaci" EntitySet="Proizvodjaci" />
+      <End Role="Modeli" EntitySet="Modeli" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Notifikac__Kupac__403A8C7D" Association="Self.FK__Notifikac__Kupac__403A8C7D">
+      <End Role="Kupci" EntitySet="Kupci" />
+      <End Role="Notifikacija" EntitySet="Notifikacija" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Pitanja__KupacID__4316F928" Association="Self.FK__Pitanja__KupacID__4316F928">
+      <End Role="Kupci" EntitySet="Kupci" />
+      <End Role="Pitanja" EntitySet="Pitanja" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Racuni__Korisnik__45F365D3" Association="Self.FK__Racuni__Korisnik__45F365D3">
+      <End Role="Korisnici" EntitySet="Korisnici" />
+      <End Role="Racuni" EntitySet="Racuni" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Racuni__KupacID__440B1D61" Association="Self.FK__Racuni__KupacID__440B1D61">
+      <End Role="Kupci" EntitySet="Kupci" />
+      <End Role="Racuni" EntitySet="Racuni" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Racuni__Placanje__44FF419A" Association="Self.FK__Racuni__Placanje__44FF419A">
+      <End Role="NaciniPlacanja" EntitySet="NaciniPlacanja" />
+      <End Role="Racuni" EntitySet="Racuni" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RacuniSta__Dijel__46E78A0C" Association="Self.FK__RacuniSta__Dijel__46E78A0C">
+      <End Role="Dijelovi" EntitySet="Dijelovi" />
+      <End Role="RacuniStavke" EntitySet="RacuniStavke" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RacuniSta__Racun__47DBAE45" Association="Self.FK__RacuniSta__Racun__47DBAE45">
+      <End Role="Racuni" EntitySet="Racuni" />
+      <End Role="RacuniStavke" EntitySet="RacuniStavke" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RacuniSta__Vozil__48CFD27E" Association="Self.FK__RacuniSta__Vozil__48CFD27E">
+      <End Role="Vozila" EntitySet="Vozila" />
+      <End Role="RacuniStavke" EntitySet="RacuniStavke" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Vozila__ModelID__49C3F6B7" Association="Self.FK__Vozila__ModelID__49C3F6B7">
+      <End Role="Modeli" EntitySet="Modeli" />
+      <End Role="Vozila" EntitySet="Vozila" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

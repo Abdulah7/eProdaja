@@ -1,0 +1,8 @@
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdajaServis\bin\Release\eProdajaServis.dll.config
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdajaServis\bin\Release\eProdajaServis.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdajaServis\bin\Release\eProdajaServis.pdb
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdajaServis\bin\Release\EntityFramework.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdajaServis\bin\Release\EntityFramework.xml
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdajaServis\obj\Release\eProdajaServis.csprojResolveAssemblyReference.cache
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdajaServis\obj\Release\eProdajaServis.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdajaServis\obj\Release\eProdajaServis.pdb

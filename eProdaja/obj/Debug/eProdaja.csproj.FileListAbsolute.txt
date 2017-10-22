@@ -1,0 +1,142 @@
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja\bin\Debug\eProdaja.exe.config
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja\bin\Debug\eProdaja.exe
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja\bin\Debug\eProdaja.pdb
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja\bin\Debug\EntityFramework.dll
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja\bin\Debug\eProdajaServis.dll
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja\bin\Debug\eProdajaServis.pdb
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja\bin\Debug\EntityFramework.xml
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.csprojResolveAssemblyReference.cache
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.frmLogin.resources
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmNovoAuto.resources
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmPretragaKorisnika.resources
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmPristup.resources
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.frmServis.resources
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.MainForma.resources
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Properties.Resources.resources
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.frmUsluge.resources
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Poruke.resources
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.csproj.GenerateResource.Cache
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.exe
+C:\Users\Abdulah\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.pdb
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\bin\Debug\eProdaja.exe.config
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\bin\Debug\eProdaja.exe
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\bin\Debug\eProdaja.pdb
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\bin\Debug\EntityFramework.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\bin\Debug\eProdajaServis.dll
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\bin\Debug\eProdajaServis.pdb
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\bin\Debug\EntityFramework.xml
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.csprojResolveAssemblyReference.cache
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmPretragaBrisanjeAuta.resources
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmPretragaBrisanjeDijelova.resources
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmPretragaBrisanjeKupaca.resources
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmProizvodjacModel.resources
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.frmLogin.resources
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmNovoAuto.resources
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmPretragaKorisnika.resources
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmPristup.resources
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.frmServis.resources
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.MainForma.resources
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Izvjestaj.Form1.resources
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Izvjestaj.racun.resources
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Properties.Resources.resources
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.frmUsluge.resources
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Poruke.resources
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.csproj.GenerateResource.Cache
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\obj\Debug\RdlCompile.cache
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\obj\Debug\RdlCompile.compiled
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.exe
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.pdb
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmDijelovi.resources
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmPregledRacuna.resources
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmIzdavanjeFakture.resources
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Izvjestaj.Form2.resources
+C:\Users\Abdulah\Documents\Visual Studio 2012\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Izvjestaj.Form3.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\bin\Debug\eProdaja.exe.config
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\bin\Debug\eProdaja.exe
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\bin\Debug\eProdaja.pdb
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\bin\Debug\EntityFramework.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\bin\Debug\eProdajaServis.dll
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\bin\Debug\eProdajaServis.pdb
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\bin\Debug\EntityFramework.xml
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.csprojResolveAssemblyReference.cache
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmDijelovi.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmPregledRacuna.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmPretragaBrisanjeAuta.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmPretragaBrisanjeDijelova.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmPretragaBrisanjeKupaca.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmProizvodjacModel.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmIzdavanjeFakture.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.frmLogin.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmNovoAuto.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmPretragaKorisnika.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmPristup.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.frmServis.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.MainForma.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Izvjestaj.Form1.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Izvjestaj.Form2.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Izvjestaj.Form3.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Izvjestaj.racun.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Properties.Resources.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.Poruke.resources
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.csproj.GenerateResource.Cache
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Debug\RdlCompile.cache
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Debug\RdlCompile.compiled
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.exe
+C:\Users\Abdulah\Documents\Visual Studio 2013\Projects\eProdaja\eProdaja\obj\Debug\eProdaja.pdb
+C:\Users\Home\Desktop\eProdaja\eProdaja\bin\Debug\eProdaja.exe.config
+C:\Users\Home\Desktop\eProdaja\eProdaja\bin\Debug\eProdaja.exe
+C:\Users\Home\Desktop\eProdaja\eProdaja\bin\Debug\eProdaja.pdb
+C:\Users\Home\Desktop\eProdaja\eProdaja\bin\Debug\EntityFramework.dll
+C:\Users\Home\Desktop\eProdaja\eProdaja\bin\Debug\eProdajaServis.dll
+C:\Users\Home\Desktop\eProdaja\eProdaja\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Home\Desktop\eProdaja\eProdaja\bin\Debug\eProdajaServis.pdb
+C:\Users\Home\Desktop\eProdaja\eProdaja\bin\Debug\EntityFramework.xml
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.csprojResolveAssemblyReference.cache
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmDijelovi.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmEvidencijaKupaca.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmEvidencijaProizvodjaca.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmPregledFakturaDijelova.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmPregledRacunaAuta.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmPretragaAuta.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmPretragaDijelova.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmPretragaKupaca.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmPretragaProizvodjaca.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmProdajaAuta.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmModel.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmIzdavanjeFakture.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.frmLogin.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmNovoAuto.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmPretragaKorisnika.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmPristup.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.frmServis.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.FrmRacunAuta.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmUpdateAuta.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.frmUpdateKorisnik.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.IzmjenaDijelova.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.KupacUpdate.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.MainForma.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.PhotoViewer.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.PregledProdajeZarade.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.PretragaModela.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.UpdateModel.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Forme.UpdatePRoizvodjac.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Izvjestaj.DijeloviStavke.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Izvjestaj.FrmAutaReport.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Izvjestaj.frmRacunDijelovi.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Izvjestaj.frmReportDijelovi.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Izvjestaj.IzvjestajProdajaAuta.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Izvjestaj.ProdajaAutaDetalji.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Izvjestaj.ProdajaDijelovaDetalji.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Izvjestaj.ProdajaIzvjestaj.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Izvjestaj.RacunIzvjestajForma.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Izvjestaj.ReportDijeloviPrint.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Izvjestaj.Vrste_dijelova.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Properties.Resources.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.Poruke.resources
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.csproj.GenerateResource.Cache
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\RdlCompile.cache
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\RdlCompile.compiled
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.exe
+C:\Users\Home\Desktop\eProdaja\eProdaja\obj\Debug\eProdaja.pdb

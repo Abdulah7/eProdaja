@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="58776010401140dab6f92d504eae2069" Name="Diagram1">
+        <EntityTypeShape EntityType="AutoSalonModel.Dijelovi" Width="1.5" PointX="6" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoSalonModel.Korisnici" Width="1.5" PointX="3.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoSalonModel.Kupci" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoSalonModel.Kvarovi" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoSalonModel.Modeli" Width="1.5" PointX="3.75" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoSalonModel.NaciniPlacanja" Width="1.5" PointX="3.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoSalonModel.Pitanja" Width="1.5" PointX="3" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoSalonModel.Proizvodjaci" Width="1.5" PointX="3.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoSalonModel.Racuni" Width="1.5" PointX="6" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoSalonModel.RacuniStavke" Width="1.5" PointX="8.25" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoSalonModel.SalonAuta" Width="1.5" PointX="1.5" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoSalonModel.sysdiagrams" Width="1.5" PointX="1.25" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoSalonModel.Vozila" Width="1.5" PointX="6" PointY="21.875" IsExpanded="true" />
+        <AssociationConnector Association="AutoSalonModel.FK__Dijelovi__Proizv__4EC8A2F6" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoSalonModel.FK__RacunStav__Dijel__75E27017" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoSalonModel.FK__Korisnici__Salon__39CD8610" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoSalonModel.FK__Racun__ServisID__049AA3C2" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoSalonModel.FK__Kvarovi__KupacID__0FA2421A" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoSalonModel.FK__Pitanja__KupacID__0EAE1DE1" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoSalonModel.FK__Racun__KupacID__7AA72534" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoSalonModel.FK__Model__Proizvodj__1446FBA6" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoSalonModel.FK__Vozilo__ModelID__5E0AE686" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoSalonModel.FK__Racun__PlacanjeI__15C52FC4" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoSalonModel.FK__RacunStav__Racun__77CAB889" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoSalonModel.FK__RacunStav__Vozil__76D69450" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AutoSalonModel.Notifikacija" Width="1.5" PointX="3" PointY="27.375" />
+        <AssociationConnector Association="AutoSalonModel.FK__Notifikac__Kupac__6DD739FB" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
